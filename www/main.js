@@ -37,6 +37,7 @@ $(document).ready(function () {
         },
 
     });
+
     //mic button click event
 
     $("#MicBtn").click(function () { 
@@ -44,6 +45,7 @@ $(document).ready(function () {
 
         $("#Oval").attr("hidden",true);
         $("#SiriWave").attr("hidden",false);
+        eel.allCommands()()
 
         
         
