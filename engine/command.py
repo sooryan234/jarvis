@@ -50,12 +50,17 @@ def takecommand():
 
 
 @eel.expose
-def allCommands():
+def allCommands(message=1):
+    if message ==1:
+        query = takecommand()
+        print(query)
+    else:
+        query = message
 
     try:
 
-        query = takecommand()
-        print(query)
+        # query = takecommand()
+        # print(query)
 
         if "open" in query:
             from engine.features import openCommand
