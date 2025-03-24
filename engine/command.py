@@ -6,6 +6,7 @@ import time
 
 
 def speak(text):
+    text = str(text)
     engine = pyttsx3.init('sapi5')
     voices = engine.getProperty('voices') 
     engine.setProperty('voice', voices[1].id)   #changing index, changes voices. 1 for female
@@ -89,7 +90,9 @@ def allCommands(message=1):
                     
                 whatsApp(contact_no, query, flag, name)
         else:
-            print(" not run")
+            from engine.features import chatBot
+            chatBot(query)
+            # print(" not run")
     except:
         print("error")
 
